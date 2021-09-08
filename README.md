@@ -106,3 +106,11 @@ This will automatically run a number of checks against your changes.
 If `./scripts/verify` fails with a number of `..target not found..` errors, you
 can run  `./scripts/verify-release` instead, which will fetch all versions of the
 documentation content before running the regular `verify` script.
+
+### Signing Keys
+
+Public keys used for verifying signatures are served on the website statically, and
+are located in `static/public-keys`.
+
+- `cert-manager-pgp.asc`: A PGP public key, used for verifying signatures on helm charts
+   using `helm verify`.
